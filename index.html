@@ -19,18 +19,6 @@
             font-family: 'Inter', sans-serif;
             background-color: #f9fafb; /* A slightly off-white for a softer look */
         }
-        
-        /* Custom style for the text highlight effect */
-        .text-highlight {
-            background-image: linear-gradient(120deg, #a6e3b6, #86d6a0);
-            background-repeat: no-repeat;
-            background-size: 100% 0.3em;
-            background-position: 0 88%;
-            transition: background-size 0.25s ease-in;
-        }
-        .text-highlight:hover {
-            background-size: 100% 88%;
-        }
 
         /* Custom style for the nav link underline effect */
         .nav-link {
@@ -69,6 +57,7 @@
             
             <!-- Navigation Links for medium screens and up -->
             <nav class="hidden md:flex items-center space-x-8">
+                <a href="https://cv.ardacanozdemir.com" target="_blank" rel="noopener noreferrer" class="nav-link font-medium text-gray-700 hover:text-gray-900">CV</a>
                 <a href="#" class="nav-link font-medium text-gray-700 hover:text-gray-900">Projects</a>
                 <a href="#" class="nav-link font-medium text-gray-700 hover:text-gray-900">Extras</a>
                 <a href="#" class="nav-link font-medium text-gray-700 hover:text-gray-900">Media</a>
@@ -85,16 +74,16 @@
             <!-- Profile Image -->
             <div class="inline-block mb-12">
                 <img 
-                    src="my_pic.jpeg" 
-                    alt="A profile picture of Ardacan Özdemir" 
+                    src="my-pic.jpeg"
+                    alt="A profile picture of Arda Can Özdemir" 
                     class="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover border-4 border-gray-800 shadow-lg"
-                    onerror="https://placehold.co/200x200/e2e8f0/333333?text=Image+Error';"
+                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/333333?text=Image+Error';"
                 >
             </div>
             
             <!-- Main Heading / Introduction -->
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-                Hey, I’m Ardacan Özdemir. Here, you can check out what I’m working on and thinking about.
+                Hey, I’m <span class="text-emerald-600">Ardacan Özdemir</span>. Here, you can check out my CV what I’m working on, what I am thinking what I am seeing.
             </h1>
         </main>
 
@@ -102,3 +91,5 @@
 
 </body>
 </html>
+
+
