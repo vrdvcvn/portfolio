@@ -55,7 +55,7 @@
                 &lt;rd/&gt;
             </div>
             
-            <!-- Navigation Links for medium screens and up -->
+            <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="https://cv.ardacanozdemir.com" target="_blank" rel="noopener noreferrer" class="nav-link font-medium text-gray-700 hover:text-gray-900">CV</a>
                 <a href="#" class="nav-link font-medium text-gray-700 hover:text-gray-900">Projects</a>
@@ -63,18 +63,36 @@
                 <a href="#" class="nav-link font-medium text-gray-700 hover:text-gray-900">Media</a>
             </nav>
             
-            <!-- Contact Button -->
-            <a href="mailto:vrdvcvn@gmail.com" class="font-bold border-2 border-gray-800 rounded-md px-5 py-2 hover:bg-gray-800 hover:text-white transition-colors duration-300">
+            <!-- Desktop Contact Button -->
+            <a href="mailto:vrdvcvn@gmail.com" class="hidden md:block font-bold border-2 border-gray-800 rounded-md px-5 py-2 hover:bg-gray-800 hover:text-white transition-colors duration-300">
                 Contact Me
             </a>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </header>
+        
+        <!-- Mobile Menu (shown/hidden by JS) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="https://cv.ardacanozdemir.com" target="_blank" rel="noopener noreferrer" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded-md">CV</a>
+            <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded-md">Projects</a>
+            <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded-md">Extras</a>
+            <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded-md">Media</a>
+            <a href="mailto:vrdvcvn@gmail.com" class="block mt-4 text-center font-bold border-2 border-gray-800 rounded-md px-5 py-2 hover:bg-gray-800 hover:text-white transition-colors duration-300">
+                Contact Me
+            </a>
+        </div>
         
         <!-- Hero Section -->
         <main class="text-center mt-24 md:mt-32">
             <!-- Profile Image -->
             <div class="inline-block mb-12">
                 <img 
-                    src="my_pic.jpeg"
+                    src="profile.jpg"
                     alt="A profile picture of Arda Can Özdemir" 
                     class="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover border-4 border-gray-800 shadow-lg"
                     onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/333333?text=Image+Error';"
@@ -83,13 +101,23 @@
             
             <!-- Main Heading / Introduction -->
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-                Hey, I’m <span class="text-emerald-600">Ardacan Özdemir</span>. Here, you can check out my CV, what I am working on, what I am thinking, and what I am seeing.
+                Hey, I’m <span class="text-emerald-600">Ardacan Özdemir</span>. Here, you can check out my CV, what I am working on, thinking about, and seeing.
             </h1>
         </main>
 
     </div>
 
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        // Get references to the button and the menu
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Add a click event listener to the button
+        menuButton.addEventListener('click', () => {
+            // Toggle the 'hidden' class on the menu
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
-
-
